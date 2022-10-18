@@ -1,0 +1,18 @@
+[RTX4090FE]
+request.method = "GET"
+request.url = "https://api.store.nvidia.com/partner/v1/feinventory?status=1&skus=NVGFT490&locale=NL"
+request.headers = [
+    "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0",
+    "Accept: application/json, text/javascript, */*; q=0.01",
+    "Content-Type: application/json",
+    "Origin: https://store.nvidia.com",
+    "Referer: https://store.nvidia.com/",
+    "Sec-Fetch-Dest: empty",
+    "Sec-Fetch-Mode: cors",
+    "Sec-Fetch-Site: same-site",
+    "TE: trailers",
+]
+request.timeout_ms = 20_000
+request.interval_ms_centre = 30_000
+request.interval_ms_scale = 20_000
+response.matcher = "\"is_active\":\"false\""
