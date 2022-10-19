@@ -13,6 +13,6 @@ request.headers = [
     "TE: trailers",
 ]
 request.timeout_ms = 20_000
-request.interval_ms_centre = 30_000
+request.interval_ms_centre = 90_000
 request.interval_ms_scale = 20_000
 response.matcher = "\"is_active\":\"false\""

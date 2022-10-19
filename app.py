@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import Optional
 
 from flask import Flask
-from config import Config, Entry
+from config import Config
 from scheduler import Scheduler
 
 app = Flask(__name__)
@@ -48,4 +48,4 @@ if __name__ == '__main__':
     config.on_refresh = handle_cfg_update
     scheduler.entries = config.config
     status["initialized"] = True
-    app.run()
+    app.run(host="0.0.0.0")
